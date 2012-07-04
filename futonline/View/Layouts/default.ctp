@@ -21,8 +21,8 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo __('CakePHP: the rapid development php framework:'); ?>
-		<?php echo $title_for_layout; ?>
+		<?php echo __('Futonline'); ?>
+		
 	</title>
 	<?php
 		echo $this->Html->meta('icon');

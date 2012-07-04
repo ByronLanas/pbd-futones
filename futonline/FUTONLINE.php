@@ -25,7 +25,7 @@
 ?>          
             <tr>
               <td>
-<label for="nombre" id="la_nombre"><?php echo $RES;  ?><br> </label>              </td>
+<label for="nombre" id="cli_rut"><?php echo $RES;  ?><br> </label>              </td>
             </tr>
 <?php
 }}

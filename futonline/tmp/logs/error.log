@@ -1,0 +1,44 @@
+2012-07-04 19:20:06 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 19:25:06 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 19:42:03 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 19:42:26 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 19:43:42 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 19:47:58 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 19:51:35 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 19:59:44 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 20:01:13 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 20:18:23 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
+2012-07-04 20:26:39 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 C:\wamp\www\futonline\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 C:\wamp\www\futonline\index.php(17): require('C:\wamp\www\fut...')
+#2 {main}
