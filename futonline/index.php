@@ -17,6 +17,7 @@
             if (!$link) {
                 die('No se pudo verificar el usuario: ' );
             }
+           // BYRON POR FAVOR 
             mssql_select_db("PBD");
             $sql = "select * from cliente";
             $result= mssql_query($sql);
