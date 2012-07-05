@@ -4,7 +4,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-?>
+?><body style="background-color:#F9BD0F; font: Helvetica 12pt;">
 <form action="/futonline/Controller/login.php" method="POST">
         <table border = "1">
         <tc>
