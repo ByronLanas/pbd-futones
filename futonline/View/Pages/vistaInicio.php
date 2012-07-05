@@ -1,5 +1,6 @@
 <?php
-
+session_start(); 
+$_SESSION["usuario"]="";
 ?>
 <HTML>
 <HEAD><TITLE> FutonLine </TITLE></HEAD>
