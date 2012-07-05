@@ -10,8 +10,8 @@
 
      <FRAMESET COLS=20%,80% NORESIZE>
 
-           <FRAME SRC="View/Pages/vistaMenu.php" noresize="noresize">
-           <FRAME SRC="View/Pages/vistaPaginaInicio.php" noresize="noresize">
+           <FRAME SRC="/futonline/View/Pages/vistaMenu.php" noresize="noresize" name ="fMenu">
+           <FRAME SRC="/futonline/View/Pages/vistaPaginaInicio.php" noresize="noresize" name="fPagina">
 
      </FRAMESET>
 
