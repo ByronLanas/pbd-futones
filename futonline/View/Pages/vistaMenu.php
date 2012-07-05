@@ -1,10 +1,9 @@
-<?php
+<?php 
+header( 'Content-Type: text/html;charset=utf-8' );  
+?>
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-?><body style="background-color:#F9BD0F; font: Helvetica 12pt;">
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<body style="background-color:#F9BD0F; font: Helvetica 12pt;">
 <form action="/futonline/Controller/login.php" method="POST">
         <table border = "1">
         <tc>
