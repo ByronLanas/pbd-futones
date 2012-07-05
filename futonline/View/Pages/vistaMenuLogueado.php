@@ -31,7 +31,7 @@ window.location="/futonline/View/Pages/vistaInicio.php";
             
         </tr>
         <tr>
-            <td><a href="/futonline/View/Pages/vistaCatalogo.php" target="fPagina">Catálogo</a></td>  
+            <td><a href="/futonline/Controller/controladorPedido.php" target="fPagina">Revisar Pedidos</a></td>  
         </tr>
 </table>
 
