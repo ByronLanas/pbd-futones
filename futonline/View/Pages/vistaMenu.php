@@ -9,7 +9,7 @@
         <table border = "1">
         <tc>
             
-            User: <input id="usuario" type="text" name="usuario" value="" onblur="evalua()" />
+            User: <input id="usuario" type="text" name="usuario" value=""  />
             
  
         </tc>
