@@ -13,16 +13,11 @@ class muestraProducto{
         $sql = "select * from PRODUCTO where TIP_PROD= '$tipoProducto'";
         
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
-        while($productos=odbc_fetch_array($result))
-        //$productos= odbc_result_all($result);
+        
+        while($aux=odbc_fetch_array($result))
+            $productos[]=$aux;
         return $productos;
-       /* while(odbc_fetch_row($result) ) {
-            $productos= odbc_result($result, "CLI_RUT");
-            
-            
-            }
 
-               return -1;//usuario no existe*/
     }
 }
 ?>

@@ -6,7 +6,7 @@ header( 'Content-Type: text/html;charset=utf-8' );
 
 <body style="background-color:#F9BD0F; font: Helvetica 12pt;">
 <?php
-session_start(); 
+session_start();
 $usuario=$_SESSION["usuario"];
 
 if ($usuario==""){

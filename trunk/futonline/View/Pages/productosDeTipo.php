@@ -18,16 +18,16 @@ $productos=$_SESSION["productos"];
         </thead>
         <tbody>
             <?php
-            
+            foreach($productos as $producto){
 ?>
                 <tr>
-                    <td><?php echo $productos['COD_PROD']?></td>
-                    <td><?php echo $productos['NOM_PROD']?></td>
-                    <td><?php echo $productos['DESC_PROD']?></td>
-                    <td><?php echo $productos['PREC_PROD']?></td>
+                    <td><?php echo $producto['COD_PROD']?></td>
+                    <td><?php echo $producto['NOM_PROD']?></td>
+                    <td><?php echo $producto['DESC_PROD']?></td>
+                    <td><?php echo $producto['PREC_PROD']?></td>
                 </tr>
-               
-            
+                <?php
+            }?>
         </tbody>
     </table>
 
