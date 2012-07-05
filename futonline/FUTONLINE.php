@@ -21,11 +21,11 @@
             $sql = "select * from CLIENTE;";
             $result= odbc_exec($link,$sql)or die(exit("Error en odbc_exec"));
             while(odbc_fetch_row($result) ) {
-               $RES= odbc_result($result, "CLI_RUT");
+               $RuES= odbc_result($result, "CLI_RUT");
 ?>          
             <tr>
               <td>
-<label for="nombre" id="cli_rut"><?php echo $RES;  ?><br> </label>              </td>
+<label for="nombre" id="cli_rut"><?php echo $RuES;  ?><br> </label>              </td>
             </tr>
 <?php
 }}

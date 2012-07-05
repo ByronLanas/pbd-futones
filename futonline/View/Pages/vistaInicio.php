@@ -10,8 +10,8 @@
 
      <FRAMESET COLS=20%,80% NORESIZE>
 
-           <FRAME SRC="vistaMenu.php" noresize="noresize">
-           <FRAME SRC="vistaPaginaInicio.php" noresize="noresize">
+           <FRAME SRC="View/Pages/vistaMenu.php" noresize="noresize">
+           <FRAME SRC="View/Pages/vistaPaginaInicio.php" noresize="noresize">
 
      </FRAMESET>
 
