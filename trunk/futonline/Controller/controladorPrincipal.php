@@ -1,3 +1,3 @@
 <?php
-require 'View/Pages/vistaInicio.php';
+header("Location: /futonline/View/Pages/vistaInicio.php"); 
 ?>
