@@ -1,4 +1,19 @@
 <?php
+session_start();
+
+
+if (!isset($_SESSION["usuario"])){
+    
+    ?><body>
+<script type="text/javascript">
+window.location="/futonline/View/Pages/vistaInicio.php";
+</script>
+</body><?php
+    
+    }
+ $usuario=$_SESSION["usuario"];
+
+?><?php
 class cancelar {
 
     public function cancelar() {
@@ -22,5 +37,6 @@ class cancelar {
 <?php
 $cancelar = new cancelar();
 //session_start();
+session_write_close();
 require 'controladorPedido.php'
 ?>

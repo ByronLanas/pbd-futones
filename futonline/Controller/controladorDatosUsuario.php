@@ -1,4 +1,19 @@
 <?php
+session_start();
+
+
+if (!isset($_SESSION["usuario"])){
+    
+    ?><body>
+<script type="text/javascript">
+window.location="/futonline/View/Pages/vistaInicio.php";
+</script>
+</body><?php
+    
+    }
+ $usuario=$_SESSION["usuario"];
+
+?><?php
 
 class datosUsuario {
     
@@ -6,10 +21,10 @@ class datosUsuario {
         $this->obtenerDatos();
     }
     public function obtenerDatos(){
- 
+        session_write_close();
         require_once '../Model/manejoDeDatos.php';
 
-        session_start(); 
+
         $accion=$_REQUEST["accion"];
         
         
@@ -118,7 +133,7 @@ class datosUsuario {
             }
             }
         }
-        
+        session_write_close();
         require '../View/Pages/vistaDatosUsuario.php';
 
         
