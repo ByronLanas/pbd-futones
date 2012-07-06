@@ -8,7 +8,7 @@ class login {
         $this->logear();
     }
     public function logear(){
- 
+
         require_once '../Model/verificaLogin.php';
         $usuario=$_REQUEST["usuario"];
         $password=$_REQUEST["password"];

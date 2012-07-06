@@ -1,5 +1,20 @@
 <?php
-//session_start();
+session_start();
+
+
+if (!isset($_SESSION["usuario"])){
+    
+    ?><body>
+<script type="text/javascript">
+window.location="/futonline/View/Pages/vistaInicio.php";
+</script>
+</body><?php
+    
+    }
+ $usuario=$_SESSION["usuario"];
+
+?><?php
+
 $nombre = $_SESSION["nombre"];
 $pedidos = $_SESSION["pedidos"]
 ?>

@@ -1,4 +1,19 @@
 <?php
+session_start();
+
+
+if (!isset($_SESSION["usuario"])){
+    
+    ?><body>
+<script type="text/javascript">
+window.location="/futonline/View/Pages/vistaInicio.php";
+</script>
+</body><?php
+    
+    }
+ $usuario=$_SESSION["usuario"];
+
+?><?php
 
 class nombre {
 
@@ -7,13 +22,14 @@ class nombre {
     }
 
     public function mostrar_nombre() {
-        
+        session_write_close();
         require_once '../Model/muestraPedido.php';
-        session_start();
+
         $usuario = $_SESSION["usuario"];
         $model = new muestraPedido();
         $modelo = $model->consultar_pedido($usuario);
         $_SESSION["pedidos"] = $modelo;
+        session_write_close();
         require '../View/Pages/vistaPedido.php';
     }
 
