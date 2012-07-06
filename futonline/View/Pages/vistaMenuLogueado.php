@@ -7,9 +7,9 @@ header( 'Content-Type: text/html;charset=utf-8' );
 <body style="background-color:#F9BD0F; font: Helvetica 12pt;">
 <?php
 session_start();
-$usuario=$_SESSION["usuario"];
 
-if ($usuario==""){
+
+if (!isset($_SESSION["usuario"])){
     
     ?><body>
 <script type="text/javascript">
@@ -18,11 +18,11 @@ window.location="/futonline/View/Pages/vistaInicio.php";
 </body><?php
     
     }
- 
+ $usuario=$_SESSION["usuario"];
 
 ?>
 
-<a href="vistaDatosUsuario.php" target="fPagina"> <?php echo $usuario;?></a><br>
+<a href="/futonline/Controller/controladorDatosUsuario.php?accion=obtener" target="fPagina"> <?php echo $usuario;?></a><br>
 <a href="/futonline/View/Pages/vistaInicio.php" target="_parent">Cerrar Sesion</a><br><br>
 <table border="1" width="100%">
 
