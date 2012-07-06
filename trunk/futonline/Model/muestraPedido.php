@@ -15,7 +15,8 @@ class muestraPedido{
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         $nombre = odbc_result($result,"CLI_NOM");
         $_SESSION["nombre"]=$nombre;
-        $sql = "SELECT * FROM pedido WHERE cli_rut='$usuario'";
+        $sql = "SELECT CLI_RUT, CONVERT(char(8),FEC_PED,103) as FEC_PED,EST_PED
+      ,MONT_PED,TIEM_PED,COD_PED FROM pedido WHERE cli_rut='$usuario' ORDER BY fec_ped";
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         while($aux=odbc_fetch_array($result))
             $pedidos[]=$aux;

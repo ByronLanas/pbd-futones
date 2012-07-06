@@ -5,7 +5,6 @@ header( 'Content-Type: text/html;charset=utf-8' );
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
 <body style="background-color:#F9BD0F; font: Helvetica 12pt;">
 <form action="/futonline/Controller/login.php" method="POST">
-        <table border = "1">
         <tc>
             
             User: <input id="usuario" type="text" name="usuario" value=""  />
@@ -22,5 +21,5 @@ header( 'Content-Type: text/html;charset=utf-8' );
                 <input type="submit" value="Ingresar" name="ingresar" />
            
         </tr>
-        </table>
-</form><div id="contenedor"></div>
+        
+</form>
