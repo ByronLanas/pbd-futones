@@ -13,7 +13,7 @@ if (!isset($_SESSION["usuario"])){
     
     ?><body>
 <script type="text/javascript">
-window.location="/futonline/View/Pages/vistaInicio.php";
+top.location="/futonline/View/Pages/vistaInicio.php";
 </script>
 </body><?php
     
@@ -23,7 +23,7 @@ window.location="/futonline/View/Pages/vistaInicio.php";
 ?>
 
 <a href="/futonline/Controller/controladorDatosUsuario.php?accion=obtener" target="fPagina"> <?php echo $usuario;?></a><br>
-<a href="/futonline/View/Pages/vistaInicio.php" target="_parent">Cerrar Sesion</a><br><br>
+<a href="../../Controller/controladorPrincipal.php" target="_parent">Cerrar Sesion</a><br><br>
 <table border="1" width="100%">
 
         <tr>
