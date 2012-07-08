@@ -31,7 +31,7 @@ $pedidos = $_SESSION["pedidos"]
         <?php
         $disc='ingresado';
         for($i=0;$i<4;$i++){
-	foreach($pedidos as $pedido)
+	if(isset($pedidos))foreach($pedidos as $pedido)
 	{  
             if($pedido['EST_PED']==$disc){
 	?>

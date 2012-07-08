@@ -72,7 +72,7 @@ header( 'Content-Type: text/html;charset=utf-8' );
             <td><div align="center">
                     <a href="../../Controller/ControladorCatalogo.php?tipoProducto=puff">
                         <img src="../Elements/puff.jpg" width="226" height="200" alt="puff"/><br>
-                        <span class="Estilo2"><strong>PUFF</strong></span>
+                        <span class="Estilo2"><strong>PUFFS</strong></span>
                     </a>
                 </div>
             </td>
@@ -80,7 +80,7 @@ header( 'Content-Type: text/html;charset=utf-8' );
             <td><div align="center">
                     <a href="../../Controller/ControladorCatalogo.php?tipoProducto=cojin">
                         <img src="../Elements/cojines.JPG" width="266" height="200" alt="cojines"/><br>
-                        <span class="Estilo2"><strong>COJIN</strong></span>
+                        <span class="Estilo2"><strong>COJINES</strong></span>
                     </a>
                 </div>
             </td>
