@@ -30,7 +30,8 @@ class nombre {
         $modelo = $model->consultar_pedido($usuario);
         $_SESSION["pedidos"] = $modelo;
         session_write_close();
-        require '../View/Pages/vistaPedido.php';
+        header("Location: ../View/Pages/vistaPedido.php");
+       // require '../View/Pages/vistaPedido.php';
     }
 
 }
