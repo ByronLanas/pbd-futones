@@ -6,7 +6,7 @@ if (!isset($_SESSION["usuario"])){
     
     ?><body>
 <script type="text/javascript">
-window.location="/futonline/View/Pages/vistaInicio.php";
+top.location="/futonline/View/Pages/vistaInicio.php";
 </script>
 </body><?php
     

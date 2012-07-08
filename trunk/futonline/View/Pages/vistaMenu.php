@@ -1,5 +1,14 @@
 <?php 
 header( 'Content-Type: text/html;charset=utf-8' );  
+session_start();
+if (isset($_SESSION["usuario"])){
+    ?>
+    <script type="text/javascript">
+    top.location="/futonline/View/Pages/vistaInicio.php";
+    </script>
+    <?php
+}
+    
 ?>
 
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
