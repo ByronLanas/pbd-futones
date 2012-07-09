@@ -21,7 +21,6 @@ class nombre {
 
     public function mostrar_nombre($id) {
         session_write_close();
-        echo 'ID'.$id;
         require_once '../Model/muestraDetalle.php';
         $usuario = $_SESSION["usuario"];
         $model = new muestraDetalle();

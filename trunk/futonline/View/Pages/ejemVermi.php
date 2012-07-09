@@ -15,14 +15,14 @@ echo '<html><title>FutonLine</title>';
      $.get("View/Pages/pagina.php", { evalua:user }, function(data)
         {
             document.getElementById("contenedor").innerHTML=data;
-            /*
+            
             if(data == "MAL"){
              document.getElementById("error_user").style.display = "block";
             }else{
                 if(data =="BIEN"){
                     document.getElementById("error_user").style.display = "none";
                 }
-            }*/
+            }
                 // lo que quieras con el valor de data
         }, "html");   
     } 
@@ -31,7 +31,7 @@ echo '<html><title>FutonLine</title>';
         <table border = "1">
         <tr>
             <td>
-            User: <input id="usuario" type="text" name="usuario" value="" onblur="evalua()" /><br>
+            User: <input id="usuario" type="text" name="usuario" value="" onblur ="evalua()" /><br>
             <span id="error_user" style="display: none;" >No existe el cliente</span>
             </td>
         </tr>
