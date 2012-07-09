@@ -25,13 +25,29 @@ class cuentasM {
         require_once '../Model/muestraCuentas.php';
 
         $model= new gestionaCuentas();
-        $modelo=$model->modificarCuentas($_REQUEST["RUT_EMP"], $_REQUEST["TIP_EMP"]);
+        $user=$_REQUEST["USU_EMP"];
+        
+        if ($user!="admin")
+            $modelo=$model->modificarCuentas($user, $_REQUEST["TIP_EMP"]);
+        else
+        {
+                            ?>
+                <script language="JavaScript">
+                    alert("No se puede modificar este usuario");
+
+                </script>
+                
+                <?php
+                $modelo=$model->listarCuentas();
+        }
+        
         
         //aqui hay q modificar una ves se implementen los permisos
 
             $_SESSION["cuentas"]=$modelo;
             
-            header("Location: ../View/Pages/vistaCuentas.php"); 
+            session_write_close();
+            require '../View/Pages/vistaCuentas.php';
 
 
         

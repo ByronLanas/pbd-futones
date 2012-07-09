@@ -34,7 +34,7 @@ class manejoDeDatos{
     
     public function modificaE($usuario,$pass){
                     
-        $sql = "update EMPLEADO set PASS_EMP = '$pass' where RUT_EMP='$usuario';";
+        $sql = "update EMPLEADO set PASS_EMP = '$pass' where USU_EMP='$usuario';";
         
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         
@@ -42,7 +42,7 @@ class manejoDeDatos{
     }
     public function modificaA($usuario,$pass,$tipo){
                     
-        $sql = "update EMPLEADO set PASS_EMP = '$pass',TIP_EMP='$tipo' where RUT_EMP='$usuario';";
+        $sql = "update EMPLEADO set PASS_EMP = '$pass',TIP_EMP='$tipo' where USU_EMP='$usuario';";
         
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         
@@ -61,7 +61,7 @@ class manejoDeDatos{
             return odbc_fetch_array($result);
         }  else {
             
-            $sql = "select * from CLIENTE where RUT_EMP= '$usuario'";
+            $sql = "select * from EMPLEADO where USU_EMP= '$usuario'";
 
             $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
             return odbc_fetch_array($result);

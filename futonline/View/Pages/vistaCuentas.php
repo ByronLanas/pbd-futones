@@ -54,8 +54,8 @@ $cuentas=$_SESSION["cuentas"];
             if(isset($cuentas))foreach($cuentas as $cuenta){
 ?>
             <tr>
-                    <form name="modificar" id="modificar" action="../../Controller/controladorCuentasModificar.php" method="POST">
-                    <td><input type="text" name="RUT_EMP" value="<?php echo $cuenta['RUT_EMP']?>" readonly="readonly" /></td>
+                    <form name="modificar" id="modificar" action="/futonline/Controller/controladorCuentasModificar.php" method="POST">
+                    <td><input type="text" name="USU_EMP" value="<?php echo $cuenta['USU_EMP']?>" readonly="readonly" /></td>
                     <td><select name="TIP_EMP" >
                         <?php if ($cuenta['TIP_EMP']=="administrador"){ ?>
                                     <option>administrador</option>
@@ -67,16 +67,16 @@ $cuentas=$_SESSION["cuentas"];
                                 </select></td>
                     <td><input type="submit" value="Modificar" /></td>
                     </form>
-                    <form name="eliminar" action="../../Controller/controladorCuentasEliminar.php" method="POST">
-                    <input type="hidden" name="RUT_EMP" value="<?php echo $cuenta['RUT_EMP']?>" />
+                    <form name="eliminar" action="/futonline/Controller/controladorCuentasEliminar.php" method="POST">
+                    <input type="hidden" name="USU_EMP" value="<?php echo $cuenta['USU_EMP']?>" />
                     <td><input type="submit" value="Eliminar" /></td>
                     
                     </form>
                 </tr>
                 <?php
             }?>
-                <form name="agregar" id="agregar" action="../../Controller/controladorCuentasAgregar.php" method="POST">
-                    <td><input type="text" name="RUT_EMP"  /></td>
+                <form name="agregar" id="agregar" action="/futonline/Controller/controladorCuentasAgregar.php" method="POST">
+                    <td><input type="text" name="USU_EMP"  /></td>
                     <td><select name="TIP_EMP" >
                                     <option>administrador</option>
                                     <option>empleado</option>

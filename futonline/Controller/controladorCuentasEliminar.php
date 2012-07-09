@@ -25,13 +25,29 @@ class cuentasE {
         require_once '../Model/muestraCuentas.php';
 
         $model= new gestionaCuentas();
-        $modelo=$model->eliminarCuentas($_REQUEST["RUT_EMP"]);
+        $user=$_REQUEST["USU_EMP"];
+        
+        if ($user!="admin")
+            $modelo=$model->eliminarCuentas($user);
+        else
+        {
+                            ?>
+                <script language="JavaScript">
+                    alert("No se puede eliminar este usuario");
+
+                </script>
+                
+                <?php
+                $modelo=$model->listarCuentas();
+        }
         
         //aqui hay q modificar una ves se implementen los permisos
 
             $_SESSION["cuentas"]=$modelo;
             
-            header("Location: ../View/Pages/vistaCuentas.php"); 
+            session_write_close();
+            require '../View/Pages/vistaCuentas.php';
+            //header("Location: ../View/Pages/vistaCuentas.php"); 
 
 
         
