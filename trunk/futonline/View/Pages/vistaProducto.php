@@ -24,7 +24,7 @@ $pedidos = $_SESSION["pedidos"]
     <?php
     if (isset($pedidos)) {
         ?>
-        <form name="cancelar" id="cancelar" action="/futonline/Controller/controladorCancelarPedido.php" method="POST">
+        <form name="borrar" id="borrar" action="/futonline/Controller/controladorBorrarProducto.php" method="POST">
             <table BGCOLOR ="#FFFFFF" border="1">
                 <tr>
                     <td width =75><div align="center">Estado</div></td>
@@ -57,9 +57,3 @@ $pedidos = $_SESSION["pedidos"]
         <?php
     }
     ?>
-
-
-
-
-
-

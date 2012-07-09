@@ -18,19 +18,17 @@ window.location="/futonline/View/Pages/vistaInicio.php";
 class nombre {
 
     public function nombre() {
-        $this->mostrar_nombre();
+        $this->mostrar_producto();
     }
 
-    public function mostrar_nombre() {
+    public function mostrar_producto() {
         session_write_close();
-        require_once '../Model/muestraPedidoIngresado.php';
-
-        $usuario = $_SESSION["usuario"];
-        $model = new muestraPedidoIngresado();
-        $modelo = $model->consultar_pedidoIngresado($usuario);
-        $_SESSION["pedidos"] = $modelo;
+        require_once '../Model/muestraProducto.php';
+        $model = new muestraProducto();
+        $modelo = $model->consultar_producto();
+        $_SESSION["productos"] = $modelo;
        session_write_close();
-        header("Location: ../View/Pages/vistaPedidoIngresado.php");
+        header("Location: ../View/Pages/productosDeTipo.php");
        // require '../View/Pages/vistaPedido.php';
     }
 

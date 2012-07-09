@@ -24,6 +24,9 @@ class catalogo {
         session_write_close();
         require_once '../Model/muestraProducto.php';
         $tipoProducto=$_REQUEST["tipoProducto"];
+        if($tipoProducto=="cubre%20futon"){
+            $tipoProducto='cubre futon';
+        }
 
         $model= new muestraProducto();
         $modelo=$model->tipoProducto($tipoProducto);
