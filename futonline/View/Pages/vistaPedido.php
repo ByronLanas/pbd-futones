@@ -18,8 +18,8 @@ window.location="/futonline/View/Pages/vistaInicio.php";
 $nombre = $_SESSION["nombre"];
 $pedidos = $_SESSION["pedidos"]
 ?>
-<body style="background-color:#0A8A9A; font: Helvetica 12pt;"> Pedidos del cliente: <?php echo $nombre;?> <br><br>
-<form name="cancelar" id="cancelar" action="../Controller/controladorCancelarPedido.php" method="POST">
+<body style="background-color:#0A8A9A; font: Helvetica 12pt;"> <span style="color:white;"><b> Pedidos del cliente: <?php echo $nombre;?></b></span> <br><br>
+<form name="cancelar" id="cancelar" action="../../Controller/controladorCancelarPedido.php" method="POST">
 <table BGCOLOR ="#FFFFFF" border="1">
         <tr>
         <td width =75><div align="center">Estado</div></td>
@@ -59,7 +59,7 @@ $pedidos = $_SESSION["pedidos"]
         }
         ?>
         <tr><td colspan="5">
-        <input type="submit" value="Cancelar" />
+        <input type="submit" value="Cancelar pedidos" />
 	</tr></td>
 </table></form>
 

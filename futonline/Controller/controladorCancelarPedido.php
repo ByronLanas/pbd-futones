@@ -38,5 +38,5 @@ class cancelar {
 $cancelar = new cancelar();
 //session_start();
 session_write_close();
-require 'controladorPedido.php'
+require 'controladorPedidoIngresado.php'
 ?>
