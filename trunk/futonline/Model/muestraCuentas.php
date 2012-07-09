@@ -25,7 +25,7 @@ class gestionaCuentas{
     }
     public function listarCuentas(){
                     
-        $sql = "select RUT_EMP, TIP_EMP from EMPLEADO";
+        $sql = "select USU_EMP, TIP_EMP from EMPLEADO";
         
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         
@@ -34,13 +34,13 @@ class gestionaCuentas{
         return $cuentas;
 
     }
-    public function eliminarCuentas($RUT_EMP){
+    public function eliminarCuentas($USU_EMP){
                     
-        $sql = "delete from EMPLEADO where RUT_EMP='$RUT_EMP'";
+        $sql = "delete from EMPLEADO where USU_EMP='$USU_EMP'";
         
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         
-        $sql = "select RUT_EMP, TIP_EMP from EMPLEADO";
+        $sql = "select USU_EMP, TIP_EMP from EMPLEADO";
         
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         
@@ -49,13 +49,13 @@ class gestionaCuentas{
         return $cuentas;
 
     }    
-    public function modificarCuentas($RUT_EMP, $TIP_EMP){
+    public function modificarCuentas($USU_EMP, $TIP_EMP){
                     
-        $sql = "update EMPLEADO set TIP_EMP='$TIP_EMP' where RUT_EMP='$RUT_EMP'";
+        $sql = "update EMPLEADO set TIP_EMP='$TIP_EMP' where USU_EMP='$USU_EMP'";
         
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         
-        $sql = "select RUT_EMP, TIP_EMP from EMPLEADO";
+        $sql = "select USU_EMP, TIP_EMP from EMPLEADO";
         
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         
@@ -64,11 +64,11 @@ class gestionaCuentas{
         return $cuentas;
 
     }    
-    public function agregarCuentas($RUT_EMP,  $TIP_EMP){
+    public function agregarCuentas($USU_EMP,  $TIP_EMP){
         
         $pass =rand(100, 999);
         
-        $sql = "insert into EMPLEADO (RUT_EMP, TIP_EMP, PASS_EMP) VALUES('$RUT_EMP', '$TIP_EMP','$RUT_EMP+$pass')";
+        $sql = "insert into EMPLEADO (USU_EMP, TIP_EMP, PASS_EMP) VALUES('$USU_EMP', '$TIP_EMP','$USU_EMP+$pass')";
         
         $result= odbc_exec($this->link,$sql)or die(exit("Error en odbc_exec"));
         

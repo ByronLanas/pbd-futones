@@ -25,7 +25,7 @@ class CuentasA {
         require_once '../Model/muestraCuentas.php';
 
         $model= new gestionaCuentas();
-        $modelo=$model->agregarCuentas($_REQUEST["RUT_EMP"],$_REQUEST["TIP_EMP"]);
+        $modelo=$model->agregarCuentas($_REQUEST["USU_EMP"],$_REQUEST["TIP_EMP"]);
         
         //aqui hay q modificar una ves se implementen los permisos
 

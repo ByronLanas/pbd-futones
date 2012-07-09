@@ -28,7 +28,13 @@ top.location="/futonline/View/Pages/vistaInicio.php";
 
         <tr>
             <td><a href="/futonline/Controller/controladorClientes.php" target="fPagina">Clientes</a></td>
+        </tr>
+        <tr>
             <td><a href="/futonline/Controller/controladorCuentas.php" target="fPagina">Cuentas de acceso</a></td>
+            
+        </tr>
+                <tr>
+            <td><a href="/futonline/Controller/controladorMatPrimas.php" target="fPagina">Materias Primas</a></td>
             
         </tr>
 
