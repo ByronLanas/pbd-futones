@@ -66,6 +66,10 @@ top.location="/futonline/View/Pages/vistaInicio.php";
             
         </tr>
         <tr>
+            <td><a href="/futonline/Controller/ControladorCatalogo.php?tipoProducto=futon" target="fPagina">Productos</a></td>
+            
+        </tr>
+        <tr>
             <td><a href="/futonline/Controller/controladorPedidoIngresadoAE.php" target="fPagina">Ver Pedidos</a></td>
             
         </tr>

@@ -20,6 +20,7 @@ $pedidos = $_SESSION["pedidos"];
         <a href ="../../Controller/controladorPedidoCancelado.php" style="color: white;"> Cancelados</a>
     </div>    
     <br>
+    
     <?php
     if (isset($pedidos)) {
         ?>

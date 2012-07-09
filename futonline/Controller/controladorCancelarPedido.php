@@ -7,29 +7,19 @@ if (!isset($_SESSION["usuario"])) {
         <script type="text/javascript">
             window.location="/futonline/View/Pages/vistaInicio.php";
         </script>
+        
     </body><?php
 }
 $usuario = $_SESSION["usuario"];
 ?>
-<script language="JavaScript">
-    alert("OLA");
-</script>
 <?php
 
 class cancelar {
 
     public function cancelar() {
-        $this->confirmar();
         $this->cancelar_pedido();
     }
 
-    public function confirmar() {
-        ?>
-        <script language="JavaScript">
-            alert("e");
-        </script>
-        <?php
-    }
 
     public function cancelar_pedido() {
         if (!isset($_REQUEST["id_pedido"])) {
@@ -50,6 +40,7 @@ class cancelar {
 ?>
 
 <?php
+
 $cancelar = new cancelar();
 //session_start();
 session_write_close();
