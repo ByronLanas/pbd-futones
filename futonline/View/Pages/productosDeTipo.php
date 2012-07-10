@@ -45,15 +45,27 @@ $productos = $_SESSION["productos"];
                 foreach ($productos as $producto) {
                     ?>
                     <tr>
-                        <td><?php $tipoProducto ?></td>
+
                         <td><?php echo $producto['COD_PROD'] ?></td>
                         <td><?php echo $producto['NOM_PROD'] ?></td>
                         <td><?php echo $producto['DESC_PROD'] ?></td>
                         <td><?php echo $producto['PREC_PROD'] ?></td>
                     </tr>
+                    
     <?php }
 ?>
-        </tbody>
+        </tbody><?php if($_SESSION["nivelPermiso"]==3){?>
+                    <form name="agregar" id="agregar" action="/futonline/Controller/controladorProductoAgregar.php" method="POST">
+                    <td></td>
+                    <td><input type="text" name="NOM_PROD" value="" /></td>
+                    <td><input type="text" name="DESC_PROD" value="" /></td>
+                    <td><input type="text" name="PREC_PROD" value="" /></td>
+                    <input type="hidden" name="TIP_PROD" value="<?php echo $_REQUEST['tipoProducto']?>" />
+                    
+                    
+                    
+                    <td colspan="2"><input type="submit" value="agregar" /></td>
+                    </form> <?php } ?>
     </table>
-
+                
 

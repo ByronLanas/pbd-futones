@@ -18,8 +18,8 @@ class gestionaClientes{
     
     var $link;
     public function gestionaClientes(){
-      //$dsn = "Driver={SQL Server Native Client 10.0};Server=NOTE\SQLEXPRESS;Database=PBD;Integrated Security=SSPI;Persist Security Info=False;";
-      $dsn = "Driver={SQL Server Native Client 11.0};Server=NOTE-PC\DIEGO;Database=PBD;Integrated Security=SSPI;Persist Security Info=False;";
+      $dsn = "Driver={SQL Server Native Client 10.0};Server=NOTE\SQLEXPRESS;Database=PBD;Integrated Security=SSPI;Persist Security Info=False;";
+      //$dsn = "Driver={SQL Server Native Client 11.0};Server=NOTE-PC\DIEGO;Database=PBD;Integrated Security=SSPI;Persist Security Info=False;";
       $this->link= odbc_connect($dsn/*HOST*/, 'byron'/*USER*/, 'byron'/*PASSWORD*/) or die('Critical Error: No se ha podido conectar a la base de datos') ;                    
       
     }
@@ -78,8 +78,8 @@ class gestionaClientes{
         
         while($aux=odbc_fetch_array($result))
             $clientes[]=$aux;
-        return $clientes;
-        $pass =rand(100, 999);
+        return array ('cuentas' => $clientes, 'pass'=>($CLI_RUT."+".$pass));
+
     }    
 }
 ?>

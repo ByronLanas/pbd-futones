@@ -31,7 +31,7 @@ class clientesM {
 
             $_SESSION["clientes"]=$modelo;
             
-            header("Location: ../View/Pages/vistaClientes.php"); 
+            header("Location: /futonline/View/Pages/vistaClientes.php"); 
 
 
         
