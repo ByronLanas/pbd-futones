@@ -29,9 +29,15 @@ class CuentasA {
         
         //aqui hay q modificar una ves se implementen los permisos
 
-            $_SESSION["cuentas"]=$modelo;
-            
-            header("Location: ../View/Pages/vistaCuentas.php"); 
+            $_SESSION["cuentas"]=$modelo["cuentas"];
+            ?> 
+            <script language="JavaScript">
+                    alert("La contraseña  del nuevo usuario es: <?php echo $modelo["pass"]?>");
+            </script>
+            <?php
+                        session_write_close();
+            require '../View/Pages/vistaCuentas.php';
+           // header("Location: ../View/Pages/vistaCuentas.php"); 
 
 
         

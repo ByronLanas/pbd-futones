@@ -30,7 +30,7 @@ top.location="/futonline/View/Pages/vistaInicio.php";
 ?><?php 
 header( 'Content-Type: text/html;charset=utf-8' );  
 
-$cuentas=$_SESSION["cuentas"];
+$proveedores=$_SESSION["proveedores"];
 ?>
 
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
@@ -57,33 +57,29 @@ $cuentas=$_SESSION["cuentas"];
             if(isset($proveedores))foreach($proveedores as $proveedor){
 ?>
             <tr>
-                    <form name="modificar" id="modificar" action="/futonline/Controller/controladorCuentasModificar.php" method="POST">
-                    <td><input type="text" name="USU_EMP" value="<?php echo $cuenta['USU_EMP']?>" readonly="readonly" /></td>
-                    <td><select name="TIP_EMP" >
-                        <?php if ($cuenta['TIP_EMP']=="administrador"){ ?>
-                                    <option>administrador</option>
-                                    <option>empleado</option>
-                        <?php } else { ?>
-                                    <option>empleado</option>
-                                    <option>administrador</option>
-                        <?php }?>
-                                </select></td>
+                    <form name="modificar" id="modificar" action="/futonline/Controller/controladorProveedoresModificar.php" method="POST">
+                    <td><?php echo $proveedor['RUT_PROV']?></td>
+                    <td><input type="text" name="NOM_PROV" value="<?php echo $proveedor['NOM_PROV']?>" /></td>
+                    <td><input type="text" name="TEL_PROV" value="<?php echo $proveedor['TEL_PROV']?>" /></td>
+                    <td><input type="text" name="DIR_PROV" value="<?php echo $proveedor['DIR_PROV']?>" /></td>
+                    <td><input type="text" name="MAIL_PROV" value="<?php echo $proveedor['MAIL_PROV']?>" /></td>
+                    <input type="hidden" name="RUT_PROV" value="<?php echo $proveedor['RUT_PROV']?>" />
                     <td><input type="submit" value="Modificar" /></td>
                     </form>
-                    <form name="eliminar" action="/futonline/Controller/controladorCuentasEliminar.php" method="POST">
-                    <input type="hidden" name="USU_EMP" value="<?php echo $cuenta['USU_EMP']?>" />
+                    <form name="eliminar" action="/futonline/Controller/controladorProveedoresEliminar.php" method="POST">
+                    <input type="hidden" name="RUT_PROV" value="<?php echo $proveedor['RUT_PROV']?>" />
                     <td><input type="submit" value="Eliminar" /></td>
                     
                     </form>
                 </tr>
                 <?php
             }?>
-                <form name="agregar" id="agregar" action="/futonline/Controller/controladorCuentasAgregar.php" method="POST">
-                    <td><input type="text" name="USU_EMP"  /></td>
-                    <td><select name="TIP_EMP" >
-                                    <option>administrador</option>
-                                    <option>empleado</option>
-                                </select></td>
+                <form name="agregar" id="agregar" action="/futonline/Controller/controladorProveedoresAgregar.php" method="POST">
+                    <td><input type="text" name="RUT_PROV" value="" /></td>
+                    <td><input type="text" name="NOM_PROV" value="" /></td>
+                    <td><input type="text" name="TEL_PROV" value="" /></td>
+                    <td><input type="text" name="DIR_PROV" value="" /></td>
+                    <td><input type="text" name="MAIL_PROV" value="" /></td>
                     
                     <td colspan="2"><input type="submit" value="agregar" /></td>
                     </form>

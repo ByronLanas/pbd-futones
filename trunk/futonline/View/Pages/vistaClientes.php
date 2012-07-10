@@ -57,7 +57,7 @@ $clientes=$_SESSION["clientes"];
             if(isset($clientes))foreach($clientes as $cliente){
 ?>
             <tr>
-                    <form name="modificar" id="modificar" action="../../Controller/controladorClientesModificar.php" method="POST">
+                    <form name="modificar" id="modificar" action="/futonline/Controller/controladorClientesModificar.php" method="POST">
                     <td><input type="text" name="CLI_RUT" value="<?php echo $cliente['CLI_RUT']?>" readonly="readonly" /></td>
                     <td><input type="text" name="CLI_NOM" value="<?php echo $cliente['CLI_NOM']?>" /></td>
                     <td><input type="text" name="CLI_MAIL" value="<?php echo $cliente['CLI_MAIL']?>" /></td>
@@ -65,7 +65,7 @@ $clientes=$_SESSION["clientes"];
                     <td><input type="text" name="CLI_DIR" value="<?php echo $cliente['CLI_DIR']?>" /></td>
                     <td><input type="submit" value="Modificar" /></td>
                     </form>
-                    <form name="eliminar" action="../../Controller/controladorClientesEliminar.php" method="POST">
+                    <form name="eliminar" action="/futonline/Controller/controladorClientesEliminar.php" method="POST">
                     <input type="hidden" name="CLI_RUT" value="<?php echo $cliente['CLI_RUT']?>" />
                     <td><input type="submit" value="Eliminar" /></td>
                     
@@ -73,7 +73,7 @@ $clientes=$_SESSION["clientes"];
                 </tr>
                 <?php
             }?>
-                <form name="agregar" id="agregar" action="../../Controller/controladorClientesAgregar.php" method="POST">
+                <form name="agregar" id="agregar" action="/futonline/Controller/controladorClientesAgregar.php" method="POST">
                     <td><input type="text" name="CLI_RUT" value="" /></td>
                     <td><input type="text" name="CLI_NOM" value="" /></td>
                     <td><input type="text" name="CLI_MAIL" value="" /></td>
