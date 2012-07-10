@@ -2,38 +2,34 @@
 session_start();
 
 
-if (!isset($_SESSION["usuario"])){
-    
+if (!isset($_SESSION["usuario"])) {
     ?><body>
-<script type="text/javascript">
-window.location="/futonline/View/Pages/vistaInicio.php";
-</script>
-</body><?php
-    
-    }
- $usuario=$_SESSION["usuario"];
-
+        <script type="text/javascript">
+            window.location="/futonline/View/Pages/vistaInicio.php";
+        </script>
+    </body><?php
+}
+$usuario = $_SESSION["usuario"];
 ?>
 <?php
-    header( 'Content-Type: text/html;charset=utf-8' );  
+header('Content-Type: text/html;charset=utf-8');
 
-    $datos=$_SESSION["datos"];
-    
+$datos = $_SESSION["datos"];
 ?>
 <META http-equiv=Content-Type content="text/html; charset=utf-8">
 <body style="background-color:#0A8A9A; font: Helvetica 12pt;">
 
-   
-    
-    <?php
-    if ($_SESSION["nivelPermiso"]==1){
-        ?>
-    <form name="datos" action="../Controller/controladorDatosUsuario.php" method="POST">
-        <table border="0">
+
+
+<?php
+if ($_SESSION["nivelPermiso"] == 1) {
+    ?>
+        <form name="datos" action="../Controller/controladorDatosUsuario.php" method="POST">
+            <table border="0">
                 <thead>
                     <tr>
                         <th>Datos Usuario</th>
-                        <th><?php echo $_SESSION["usuario"];?></th>
+                        <th><?php echo $_SESSION["usuario"]; ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,7 +37,7 @@ window.location="/futonline/View/Pages/vistaInicio.php";
                         <th><br></th>
                     </tr>
                     <tr>
-                
+
                         <td>Nombre: </td>
                         <td><input type="text" size="50" name="nombre" value="<?php echo $datos["CLI_NOM"] ?>" /></td>
                     </tr>
@@ -71,20 +67,20 @@ window.location="/futonline/View/Pages/vistaInicio.php";
                     </tr>
                 </tbody>
             </table>
-        
-        
-    </form>
-					
-    
+
+
+        </form>
+
+
     <?php
-    }else if ($_SESSION["nivelPermiso"]==2){
-        ?>
-    <form name="datos" action="../Controller/controladorDatosUsuario.php" method="POST">
-        <table border="0">
+} else if ($_SESSION["nivelPermiso"] == 2) {
+    ?>
+        <form name="datos" action="../Controller/controladorDatosUsuario.php" method="POST">
+            <table border="0">
                 <thead>
                     <tr>
                         <th>Datos Usuario</th>
-                        <th><?php echo $_SESSION["usuario"];?></th>
+                        <th><?php echo $_SESSION["usuario"]; ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -105,20 +101,20 @@ window.location="/futonline/View/Pages/vistaInicio.php";
                     </tr>
                 </tbody>
             </table>
-        
-        
-    </form>
-					
-    
+
+
+        </form>
+
+
     <?php
-    }else if ($_SESSION["nivelPermiso"]==3){
-        ?>
-    <form name="datos" action="../Controller/controladorDatosUsuario.php" method="POST">
-        <table border="0">
+} else if ($_SESSION["nivelPermiso"] == 3) {
+    ?>
+        <form name="datos" action="../Controller/controladorDatosUsuario.php" method="POST">
+            <table border="0">
                 <thead>
                     <tr>
                         <th>Datos Usuario</th>
-                        <th><?php echo $_SESSION["usuario"];?></th>
+                        <th><?php echo $_SESSION["usuario"]; ?></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -128,9 +124,9 @@ window.location="/futonline/View/Pages/vistaInicio.php";
                     <tr>
                         <td>Tipo de Empleado: </td>
                         <td><select name="tipo">
-                                    <option>administrador</option>
-                                    <option>empleado</option>
-                                </select></td>
+                                <option>administrador</option>
+                                <option>empleado</option>
+                            </select></td>
                     </tr>
                     <tr>
                         <td>Contraseña: </td>
@@ -146,10 +142,10 @@ window.location="/futonline/View/Pages/vistaInicio.php";
                     </tr>
                 </tbody>
             </table>
-        
-        
-    </form>
-					
-    
+
+
+        </form>
+
+
     <?php
-    }
+}
